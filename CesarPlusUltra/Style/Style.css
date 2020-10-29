@@ -4,7 +4,7 @@
 
   background-color : #026873            ;
 
-  padding          : 10px 10px 10px 10px;
+  padding          : 1% 1% 1% 1%;
 
   margin-left: auto;
   margin-right:auto;
@@ -33,10 +33,10 @@
 
   font-size: 20pt;
 
-  padding: 15px;
+  padding: 1%;
 
   height : 50%;
-  width  : 90%;
+  width  : 98%;
 
   resize: none;
 
@@ -59,10 +59,11 @@
 #codificacion #botones button{
 
   float:none;
-  width: 100%;
+  width: 49.7%;
   display: inline-block;
   height: 4em;
-  border: 0;
+  border-width: 0;
   margin: 0;
+  padding: 0;
 
 }
