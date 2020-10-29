@@ -7,12 +7,23 @@ var cesar = cesar || (function(){
     var doStaff = function(txt, a, b, action){
         var replace = (function(){
             //mi abecedario
-            var abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
-                        'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r',
-                    's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a'];
-            var l = abc.length;
+
+            const abc = ['a'/*00*/, 'b'/*01*/, 'c'/*02*/, 'd'/*03*/, 'e'/*04*/,
+                        'f'/*05*/, 'g'/*06*/, 'h'/*07*/, 'i'/*08*/, 'j'/*09*/,
+                       'k'/*10*/, 'l'/*11*/, 'm'/*12*/, 'n'/*13*/, 'ñ'/*14*/,
+                      'o'/*15*/, 'p'/*16*/, 'q'/*17*/, 'r'/*18*/, 's'/*19*/,
+                     't'/*20*/, 'u'/*21*/, 'v'/*22*/, 'w'/*23*/, 'x'/*24*/,
+                    'y'/*25*/, 'z'/*26*/];
+
+
+            const l = abc.length;
+
+            //aX+b mod 27 cesarPlusUtra (mejorado)
 
             
+
+
+
 
     };
 })();
