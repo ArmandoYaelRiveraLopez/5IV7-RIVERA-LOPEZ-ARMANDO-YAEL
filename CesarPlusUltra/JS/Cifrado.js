@@ -6,7 +6,7 @@ var cesar = cesar || function(txt, a, b, action){
 
         var replace = (function(){
             //mi abecedario
-          var resultado = 0;
+          var resultado = "El cifrado es : ";
           const abc = [ 'a'/*00*/, 'b'/*01*/, 'c'/*02*/, 'd'/*03*/, 'e'/*04*/,
                        'f'/*05*/, 'g'/*06*/, 'h'/*07*/, 'i'/*08*/, 'j'/*09*/,
                       'k'/*10*/, 'l'/*11*/, 'm'/*12*/, 'n'/*13*/, 'ñ'/*14*/,
@@ -46,20 +46,56 @@ var cesar = cesar || function(txt, a, b, action){
 */
 
 
+          if (action) {
 
-          for (var i = 0; i < txt.length; i++) {
+            for (var i = 0; i < txt.length; i++) {
 
-            for (var circ = 0; circ < abc.length; circ++) {
+              for (var circ = 0; circ < abc.length; circ++) {
 
-              if( txt[i] == abc[circ]){
+                if( txt[i] == abc[circ]){
 
-                
 
-                console.log(circ);
+                  var necod = a*circ+b
 
-                break;
+                  if (necod <= 27){
+
+                    console.log("new placement : " + necod);
+
+                    resultado = resultado + abc[necod];
+
+
+                  }else {
+
+                    var div = necod/27;
+                    div = Math.round(div);
+                    var resto = necod - (div*27);
+
+                    console.log("new placement : " + necod);
+
+                    resultado = resultado + abc[resto];
+
+
+
+                  }
+                  console.log(circ);
+
+                  break;
+
+                }
 
               }
+
+            }
+
+          }
+
+          else {
+
+            for (var i = 0; i < txt.length; i++) {
+
+
+
+                resslt
 
             }
 
