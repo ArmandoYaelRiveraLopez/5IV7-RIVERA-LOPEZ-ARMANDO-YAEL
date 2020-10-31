@@ -55,28 +55,18 @@ var cesar = cesar || function(txt, a, b, action){
                 if( txt[i] == abc[circ]){
 
 
-                  var necod = a*circ+b
+                  var necod = /*a*/circ+b;
 
-                  if (necod <= 27){
+                  var resto = necod % 27;
 
-                    console.log("new placement : " + necod);
+                  //var div = necod/27;
+                  //div = Math.round(div);
+                  //var resto = necod - (div*27);
 
-                    resultado = resultado + abc[necod];
+                  console.log("new placement : " + necod);
 
+                  resultado = resultado + abc[resto];
 
-                  }else {
-
-                    var div = necod/27;
-                    div = Math.round(div);
-                    var resto = necod - (div*27);
-
-                    console.log("new placement : " + necod);
-
-                    resultado = resultado + abc[resto];
-
-
-
-                  }
                   console.log(circ);
 
                   break;
@@ -93,9 +83,32 @@ var cesar = cesar || function(txt, a, b, action){
 
             for (var i = 0; i < txt.length; i++) {
 
+              for (var circ = 0; circ < abc.length; circ++) {
+                if( txt[i] == abc[circ] ){
+
+                    var reversF;
+
+                    if((circ-b) == Math.abs(circ-b)){
+
+                      reversF = (circ-b)/*/a*/;
+                      reversF = reversF % 27;
+
+                    }
+                    else{
+
+                      reversF = (27 + (circ - b));
+                      console.log(reversF);
+
+                    }
 
 
-                resslt
+                    console.log(reversF);
+
+                   resultado = resultado + abc[reversF];
+
+                }
+
+              }
 
             }
 
@@ -112,13 +125,12 @@ var cesar = cesar || function(txt, a, b, action){
 
 function codificar(){
     //obtener el texto del textarea
-    document.getElementById("resultado").innerHTML = cesar( document.getElementById("cadena").value, 3, 4, true);
+    document.getElementById("resultado").innerHTML = cesar( document.getElementById("cadena").value, 3,parseInt( document.getElementById("despla").value), true);
 
 }
 
 function decodificar(){
     //obtener el texto del textarea
-    document.getElementById("resultado").innerHTML = cesar.decode(
-        document.getElementById("cadena").value, 3);
+    document.getElementById("resultado").innerHTML = cesar(document.getElementById("cadena").value, 3,parseInt( document.getElementById("despla").value), false);
 
 }

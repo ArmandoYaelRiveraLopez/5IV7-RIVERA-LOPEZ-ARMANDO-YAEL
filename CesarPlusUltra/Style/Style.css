@@ -35,7 +35,7 @@
 
   padding: 1%;
 
-  height : 50%;
+  height : 50px;
   width  : 98%;
 
   resize: none;
@@ -43,6 +43,10 @@
   background-color : #051926 ;
   border-style     : none    ;
   margin: 0;
+
+  border-bottom-style: solid;
+  border-color: white;
+  border-bottom-width: medium;
 
 }
 
@@ -59,7 +63,7 @@
 #codificacion #botones button{
 
   float:none;
-  width: 49.7%;
+  width: 100%;
   display: inline-block;
   height: 4em;
   border-width: 0;
